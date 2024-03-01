@@ -1,0 +1,49 @@
+.header
+    height
+    position: relative
+    @include flexDisplay (start, center, column)
+
+    picture 
+        position: absolute
+        z-index: -1
+
+        img
+            width: 100vw
+            height: 350px
+
+    h1,div
+        z-index: 1
+
+    h1
+        font-size: 40px
+        margin-top: 30px
+        color: white
+
+    .header_form
+        @include flexDisplay (center, center, row)
+
+        height: 50px
+        margin-top: 30px
+
+        .header_form_input
+            border: none
+            width: 500px
+            height: 100%
+            padding-left: 20px
+            border-top-left-radius: 10px
+            border-bottom-left-radius: 10px
+            font-size: 18px
+            color: $DarkGray
+            outline: none
+
+            &:focus
+                outline: none
+        
+        .header_form_button 
+            width: 50px
+            height: 53px
+            border: none
+            border-top-right-radius: 10px
+            border-bottom-right-radius: 10px
+            background-color: black
+            cursor: pointer
