@@ -1,0 +1,35 @@
+.infoAreaContainer
+    @include flexDisplay(center, center, row)
+    margin-top: -100px 
+
+
+    .InfoArea
+        @include flexDisplay(center, start, row)
+        height: 100px
+        background: white
+        padding: 40px
+        border-radius: 20px
+
+        .separator 
+            width: 1px
+            margin: 0px 50px
+            height: 100%
+
+            background-color: $DarkGray
+
+        .infoArea_info
+            height: 70%
+            @include flexDisplay(space-between, start, column)
+
+            p
+                color: $DarkGray
+                font-weight: 500
+                font-size: 15px
+
+            h2
+                color: $VeryDarkGray
+                font-weight: 700
+                font-size: 30px
+
+
+            

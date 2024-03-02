@@ -1,6 +1,8 @@
 // import header
 import Header from "./components/header/header"
 
+import InfoArea from "./components/infoArea/infoArea";
+
 //import map
 import Map from "./components/map/map"
 
@@ -16,6 +18,11 @@ const App = () => {
 
     // create state hook for IP
     const [IP, setIP] = useState("");
+    const [region, setRegion] = useState("");
+    const [city, setCity] = useState("");
+    const [postalCode, setPostalCode] = useState("");
+    const [timeZone, setTimeZone] = useState("");
+    const [isp, setIsp] = useState("");
 
     //use Effect foe when the pogram start
     useEffect(() => {
@@ -40,6 +47,11 @@ const App = () => {
                 // set cordinates
                 setLat(response.data.location.lat);
                 setLng(response.data.location.lng)
+                setRegion(response.data.location.region)
+                setCity(response.data.location.city)
+                setPostalCode(response.data.location.postalCode)
+                setTimeZone(response.data.location.timezone)
+                setIsp(response.data.isp)
             })
 
     }, [IP])
@@ -51,7 +63,10 @@ const App = () => {
                 {/* header component */}
                 <Header setIP={setIP}/>
 
-                 {/*map component  */}
+                {/* infoArea Component */}
+                <InfoArea IP={IP} region={region} city={city} timeZone={timeZone} postalCode={postalCode} isp={isp}/>
+
+                {/*map component  */}
                 <Map lat={lat} lng={lng}/>
             </>
         )

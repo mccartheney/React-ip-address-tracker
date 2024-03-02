@@ -53,6 +53,7 @@ body {
 }
 
 .header {
+  height: 350px;
   position: relative;
   display: flex;
   justify-content: start;
@@ -111,4 +112,45 @@ body {
   position: absolute;
   bottom: 0px;
   height: calc(100vh - 350px);
+}
+
+.infoAreaContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin-top: -100px;
+}
+.infoAreaContainer .InfoArea {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: row;
+  height: 100px;
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+}
+.infoAreaContainer .InfoArea .separator {
+  width: 1px;
+  margin: 0px 50px;
+  height: 100%;
+  background-color: hsl(0, 0%, 59%);
+}
+.infoAreaContainer .InfoArea .infoArea_info {
+  height: 70%;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  flex-direction: column;
+}
+.infoAreaContainer .InfoArea .infoArea_info p {
+  color: hsl(0, 0%, 59%);
+  font-weight: 500;
+  font-size: 15px;
+}
+.infoAreaContainer .InfoArea .infoArea_info h2 {
+  color: hsl(0, 0%, 17%);
+  font-weight: 700;
+  font-size: 30px;
 }/*# sourceMappingURL=style.css.map */
