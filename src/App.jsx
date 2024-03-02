@@ -1,10 +1,11 @@
 // import header
 import Header from "./components/header/header"
 
+// import infoArea
 import InfoArea from "./components/infoArea/infoArea";
 
 //import map
-import Map from "./components/map/map"
+import Map from "./components/map/map";
 
 //import hooks
 import { useEffect } from "react";
@@ -15,6 +16,8 @@ import axios from "axios";
 
 // create App
 const App = () => {
+    // get api key from .env
+    const apiKey = process.env.REACT_APP_API_KEY ;
 
     // create state hook for IP
     const [IP, setIP] = useState("");
@@ -36,28 +39,28 @@ const App = () => {
     }, [])
 
     // create hooks for lat and lng (cordinates)
-    const [lat, setLat] = useState("")
-    const [lng, setLng] = useState("")
+    const [lat, setLat] = useState("");
+    const [lng, setLng] = useState("");
 
     //use Effect foe when the pogram start or when IP hook changes
     useEffect(() => {
         // get ip info from ipify Api
-        axios.get(`https://geo.ipify.org/api/v2/country,city?apiKey=at_QLnpiQcu15iTxJg3P5B9JmOULCnVT&ipAddress=${IP}`)
+        axios.get(`https://geo.ipify.org/api/v2/country,city?apiKey=${apiKey}&ipAddress=${IP}`)
             .then(response => {
                 // set cordinates
                 setLat(response.data.location.lat);
-                setLng(response.data.location.lng)
-                setRegion(response.data.location.region)
-                setCity(response.data.location.city)
-                setPostalCode(response.data.location.postalCode)
-                setTimeZone(response.data.location.timezone)
-                setIsp(response.data.isp)
+                setLng(response.data.location.lng);
+                setRegion(response.data.location.region);
+                setCity(response.data.location.city);
+                setPostalCode(response.data.location.postalCode);
+                setTimeZone(response.data.location.timezone);
+                setIsp(response.data.isp);
             })
 
     }, [IP])
 
     // verify is cordinates is loaded
-    if (lat && lng) { // if it is 
+    if ((lat && lng)) { // if it is 
         return( // return page
             <>
                 {/* header component */}
@@ -79,7 +82,6 @@ const App = () => {
             </>
         )
     }
-
 }
 
-export default App
+export default App;

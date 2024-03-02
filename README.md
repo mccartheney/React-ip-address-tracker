@@ -60,6 +60,13 @@ The challenge for this project was to create a web application where users can t
   ```bash
   npm install
   ```
+
+4. create a .env file and put your apiKey from [geo.ipify](https://geo.ipify.org/)
+  ```bash
+  REACT_APP_API_KEY = YourApiKey
+  ```
+
+
 4. Run the development server:
   ```bash
   npm start

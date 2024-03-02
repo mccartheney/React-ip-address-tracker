@@ -1,11 +1,13 @@
 // import search icon
-import searchIcon from "../../images/icon-arrow.svg"
+import searchIcon from "../../images/icon-arrow.svg";
 // import mobile background
-import mobileBackground from "../../images/pattern-bg-mobile.png"
+import mobileBackground from "../../images/pattern-bg-mobile.png";
 // import desktop background
-import desktopBackground from "../../images/pattern-bg-desktop.png"
+import desktopBackground from "../../images/pattern-bg-desktop.png";;
 
-const Header = () => {
+const Header = (props) => {
+    const {setIP} = props;
+
     return (
         <div className="header">
             {/* background */}
@@ -23,7 +25,9 @@ const Header = () => {
             {/* search for ip */}
             <div className="header_form">
                 <input type="text" placeholder=" Search for any IP address" className="header_form_input" />
-                <button className="header_form_button">
+                <button className="header_form_button" onClick={() => {
+                    setIP(document.querySelector(".header_form_input").value);
+                }}>
                     <img src={searchIcon} alt="search" />
                 </button>
             </div>
@@ -31,4 +35,4 @@ const Header = () => {
     )
 };
 
-export default Header
+export default Header;
