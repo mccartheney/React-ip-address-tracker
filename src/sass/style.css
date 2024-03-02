@@ -105,4 +105,10 @@ body {
   border-bottom-right-radius: 10px;
   background-color: black;
   cursor: pointer;
+}
+
+.map {
+  position: absolute;
+  bottom: 0px;
+  height: calc(100vh - 350px);
 }/*# sourceMappingURL=style.css.map */

@@ -22,7 +22,7 @@ const Header = () => {
 
             {/* search for ip */}
             <div className="header_form">
-                <input type="text" placeholder=" Search for any IP address or domain" className="header_form_input" />
+                <input type="text" placeholder=" Search for any IP address" className="header_form_input" />
                 <button className="header_form_button">
                     <img src={searchIcon} alt="search" />
                 </button>
