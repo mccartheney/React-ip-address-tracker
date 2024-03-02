@@ -1,50 +1,75 @@
-# React IP address tracker
+# React IP Address Tracker
 
-## Table of contents
+## Table of Contents
 
 - [Overview](#overview)
-  - [The challenge](#the-challenge)
+  - [The Challenge](#the-challenge)
   - [Screenshot](#screenshot)
-- [My process](#my-process)
-  - [Built with](#built-with)
-  - [Useful resources](#useful-resources)
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Setup Instructions](#setup-instructions)
+- [License](#license)
 - [Author](#author)
-
-**Note: Delete this note and update the table of contents based on what sections you keep.**
 
 ## Overview
 
-### The challenge
+### The Challenge
 
-Users should be able to:
+The challenge for this project was to create a web application where users can track IP addresses. Key requirements included:
 
-- View the optimal layout for each page depending on their device's screen size
-- See hover states for all interactive elements on the page
-- See their own IP address on the map on the initial page load
-- Search for any IP addresses and see the key information and location
+- Designing responsive layouts optimized for various screen sizes.
+- Implementing hover states for interactive elements.
+- Displaying the user's own IP address on a map upon initial page load.
+- Allowing users to search for any IP address and view its key information and location.
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![Screenshot](./design/desktop-design.jpg)
+![Screenshot](./design/mobile-design.jpg)
 
-## My process
+## Features
 
-### Built with
+- View the optimal layout for each page depending on their device's screen size.
+- See hover states for all interactive elements on the page.
+- View their own IP address on the map on the initial page load.
+- Search for any IP address and see its key information and location.
+
+## Technologies Used
 
 - HTML5
-- sass
+- CSS3 (Sass)
 - Flexbox
-- Mobile-first workflow
-- Javascript
-- [React](https://reactjs.org/) - JS library
+- JavaScript
+- React.js - JavaScript library for building user interfaces
+- [ipify API](https://www.ipify.org/) - Used to fetch the user's IP address based on their device
+- [react leaflet](https://react-leaflet.js.org/) - Used for displaying the map and fetching location information based on IP addresses
 
+## Setup Instructions
 
-### Useful resources
+1. Clone the repository: 
+  ```bash
+  git clone https://github.com/mccartheney/react-ip-address-tracker.git
+  ```
 
+2. Navigate to the project directory: 
+  ```bash
+  cd react-ip-address-tracker
+  ```
+
+3. Install dependencies:
+  ```bash
+  npm install
+  ```
+4. Run the development server:
+  ```bash
+  npm start
+  ```
+5. Open your web browser and visit `http://localhost:3000` to view the application.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](./LICENSE) file for details.
 
 ## Author
 
-
-
-## Acknowledgments
-
+[Mccarteney] - [GitHub Profile](https://github.com/mccartheney)
