@@ -67,11 +67,11 @@ The challenge for this project was to create a web application where users can t
   ```
 
 
-4. Run the development server:
+5. Run the development server:
   ```bash
   npm start
   ```
-5. Open your web browser and visit `http://localhost:3000` to view the application.
+6. Open your web browser and visit `http://localhost:3000` to view the application.
 
 ## License
 
@@ -79,4 +79,4 @@ This project is licensed under the MIT License - see the [LICENSE](./LICENSE) fi
 
 ## Author
 
-[Mccarteney] - [GitHub Profile](https://github.com/mccartheney)
+Mccarteney - [GitHub Profile](https://github.com/mccartheney)
